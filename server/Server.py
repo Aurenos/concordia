@@ -2,7 +2,7 @@
 
 from asyncore import dispatcher
 from asynchat import async_chat
-#from apiclient.discovery import build
+from apiclient.discovery import build
 from ServerCommands import *
 import socket, asyncore
 
@@ -11,7 +11,7 @@ NAME = "Concordia"
 MOTD = "Welcome to the Concordia chat server! Please keep in mind that the Google Translate API costs money for us to use. So don't go overboard with this...or I'll find you."
 
 # Google API Key for authorizing Google Apps transactions
-G_API_KEY = ''
+G_API_KEY = '' # Stored in api_key.txt
 
 class ChatSession(async_chat):
     def __init__(self, server, sock):
